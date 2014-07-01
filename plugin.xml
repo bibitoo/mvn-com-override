@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+         <objectContribution 
+      		adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            id="cc.landking.development.tools.menu">
+         <menu
+               label="%cc.landking.development.tools.entitydiagram.category.name"
+               path="additions"
+               id="cc.landking.development.tools.submenu">
+            <separator
+                  name="spring">
+            </separator>
+         </menu>
+         <action
+               label="%MvnComponentOveride"
+               icon="icons/todb.png"
+               class="cc.landking.development.tools.mvn_com_overide.MvnComponentOverideAction"
+               menubarPath="cc.landking.development.tools.submenu/spring"
+               enablesFor="1"
+               id="cc.landking.development.tools.mvn_com_overide.MvnComponentOverideAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
